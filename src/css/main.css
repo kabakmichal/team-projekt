@@ -102,6 +102,13 @@ img {
   background-color: var(--header-background-color);
 }
 
+.icon-menu {
+  width: 20px;
+  height: 12px;
+  background-image: url("../images/icons.svg#icon-menu");
+  fill: black;
+}
+
 .about {
   padding-top: 98px;
   background-color: var(--background-color);
@@ -981,6 +988,16 @@ img {
     cursor: pointer;
     border: none;
   }
+  .modal {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.2);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1466,6 +1483,75 @@ img {
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
+  .location {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 1000ms;
+            transition-duration: 1000ms;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .location__frame {
+    width: 100%;
+  }
+  .location--hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .location {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 1000ms;
+            transition-duration: 1000ms;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .location--hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .location {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 1000ms;
+            transition-duration: 1000ms;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .location--hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .modal {
     position: relative;
     top: 50%;
@@ -1585,6 +1671,117 @@ img {
   .is-hidden {
     opacity: 0;
     pointer-events: none;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .location__modal {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 480px;
+    height: 50%;
+    background-color: var(--btn-color-secondary);
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  .close-location-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--btn-color-secondary);
+    fill: var(--font-subtext-main);
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1190px) {
+  .location__modal {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 768px;
+    height: 50%;
+    background-color: var(--btn-color-secondary);
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  .close-location-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--btn-color-secondary);
+    fill: var(--font-subtext-main);
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .location__modal {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 1280px;
+    height: 50%;
+    background-color: var(--btn-color-secondary);
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  .close-location-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--btn-color-secondary);
+    fill: var(--font-subtext-main);
+    cursor: pointer;
   }
 }
 
